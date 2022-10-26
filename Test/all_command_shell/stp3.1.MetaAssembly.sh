@@ -1,0 +1,5 @@
+mkdir -p  /zfsqd1/ST_OCEAN/USRS/qiyanwei/software/api/MetaTrass_Lite//Test/dir3_assembly/cloudspades/17  && cd  /zfsqd1/ST_OCEAN/USRS/qiyanwei/software/api/MetaTrass_Lite//Test/dir3_assembly/cloudspades/17
+/zfsqd1/ST_OCEAN/USRS/qiyanwei/software/api/MetaTrass_Lite/tools/python3 /zfsqd1/ST_OCEAN/USRS/qiyanwei/software/api/MetaTrass_Lite/tools/stlfr2cloudspades/stlfr2cloudspades.py -fastq1 /zfsqd1/ST_OCEAN/USRS/qiyanwei/software/api/MetaTrass_Lite//Test/dir2_taxonomy/ID2FQ/5X.id_17.allbarcode.txt_list_1.fq.gz -fastq2 /zfsqd1/ST_OCEAN/USRS/qiyanwei/software/api/MetaTrass_Lite//Test/dir2_taxonomy/ID2FQ/5X.id_17.allbarcode.txt_list_2.fq.gz -memory 150 -maprate 8 -thread 4 -pairdepth 2 -outdir /zfsqd1/ST_OCEAN/USRS/qiyanwei/software/api/MetaTrass_Lite//Test/dir3_assembly/cloudspades/17 -prefix 17
+rm -rf /zfsqd1/ST_OCEAN/USRS/qiyanwei/software/api/MetaTrass_Lite//Test/dir3_assembly/cloudspades/17/cloudspades_out/
+rm -rf /zfsqd1/ST_OCEAN/USRS/qiyanwei/software/api/MetaTrass_Lite//Test/dir3_assembly/cloudspades/17/longranger/
+rm -rf /zfsqd1/ST_OCEAN/USRS/qiyanwei/software/api/MetaTrass_Lite//Test/dir3_assembly/cloudspades/17/*.fastq.gz

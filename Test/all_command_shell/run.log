@@ -1,0 +1,30 @@
+[2022-05-17 10:08:45] ###step2.1 kraken classfying starting
+[2022-05-17 10:09:42] ###step2.1 kraken classfying end
+[2022-05-17 10:09:42] ###step2.2 TABrefining starting
+[2022-05-17 10:09:54] ###step2.2 TABrefining end
+[2022-05-17 10:09:54] ###step2.3 ReadID2Fastq starting
+[2022-05-17 10:10:48] ###step2.3 ReadID2Fastq end
+[2022-05-17 10:10:48] ###step3.1 MetaAssembly starting
+[2022-05-17 12:32:07] ###step3.1 MetaAssembly end
+[2022-05-17 12:32:07] ###step3.2 ContigPurify starting
+[2022-05-17 12:32:38] ###step3.2 ContigPurify end
+[2022-10-19 15:41:32] ###step2.1 kraken classfying starting
+[2022-10-19 15:42:42] ###step2.1 kraken classfying end
+[2022-10-19 15:42:42] ###step2.2 TABrefining starting
+[2022-10-19 15:42:45] ###step2.2 TABrefining end
+[2022-10-19 15:42:45] ###step2.3 ReadID2Fastq starting
+[2022-10-19 15:42:47] ###step2.3 ReadID2Fastq end
+[2022-10-19 15:43:01] ###step3.1 MetaAssembly starting
+[2022-10-19 15:43:02] ###step3.1 MetaAssembly end
+[2022-10-19 15:43:02] ###step3.2 ContigPurify starting
+[2022-10-19 15:43:02] ###step3.2 ContigPurify end
+[2022-10-19 15:43:37] ###step2.1 kraken classfying starting
+[2022-10-19 15:43:46] ###step2.1 kraken classfying end
+[2022-10-19 15:43:46] ###step2.2 TABrefining starting
+[2022-10-19 15:43:49] ###step2.2 TABrefining end
+[2022-10-19 15:43:49] ###step2.3 ReadID2Fastq starting
+[2022-10-19 15:44:07] ###step2.3 ReadID2Fastq end
+[2022-10-19 15:47:18] ###step3.1 MetaAssembly starting
+[2022-10-19 17:19:54] ###step3.1 MetaAssembly end
+[2022-10-19 17:19:54] ###step3.2 ContigPurify starting
+[2022-10-19 17:20:25] ###step3.2 ContigPurify end

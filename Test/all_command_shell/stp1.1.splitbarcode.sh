@@ -1,0 +1,2 @@
+cd /zfsqd1/ST_OCEAN/USRS/qiyanwei/project2/4.MetaTrass/7.Demo//Test/dir1_cleandata/ 
+perl /zfsqd1/ST_OCEAN/USRS/qiyanwei/software/api/MetaTrass/tools/split_barcode.pl /zfsqd1/ST_OCEAN/USRS/qiyanwei/software/api/MetaTrass/config/barcode_list.txt /zfsqd1/ST_OCEAN/USRS/qiyanwei/project2/4.MetaTrass/7.Demo/10X.id_17.allbarcode.txt_list_1.fq.gz /zfsqd1/ST_OCEAN/USRS/qiyanwei/project2/4.MetaTrass/7.Demo/10X.id_17.allbarcode.txt_list_2.fq.gz split_reads
