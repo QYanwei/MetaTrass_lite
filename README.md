@@ -1,4 +1,4 @@
-**MetaTrass © BGI-Qingdao**
+**MetaTrass_lite © BGI-Qingdao**
 ---
 
 Description:
@@ -10,6 +10,8 @@ MetaTrass is the first metagenome assembly tool implemented by binning-first-ass
 MetaTrass integrates the cobarcoding and the reference genome information to achieve high capability of generating high-quality genomes at species level for the human gut microbial commuities.
 
 MetaTrass uses the cobarcoding correlation between short length reads to reduce false positives in conventional taxonomic binning and improve the contiguity of draft assemblies.
+
+Here, we release a candidate version for MetaTrass software by using CloudSPAdes to assembly single species.
 
 ![Graphical abstract](images/imt2.46.jpg)
 
@@ -25,9 +27,8 @@ https://doi.org/10.1002/imt2.46
 
 Change Log:
 ---
-* v1.2.0 (2021-08-03) - Finished a version test!
-* v1.1.0 (2021-07-09) - Fixed a few bugs
-* v1.0.0 (2021-04-13) - Initial release
+
+* v1.0.0 (2022-10-13) - Initial release
 
 Dependencies:
 ---
@@ -42,7 +43,7 @@ Third-party software:
 + [stLFR_barcode_split](https://github.com/BGI-Qingdao/stLFR_barcode_split.git)
 + [Kraken2](https://github.com/DerrickWood/kraken2)
 + [Seqtk](https://github.com/lh3/seqtk.git)
-+ [stlfr2supernova](https://github.com/BGI-Qingdao/stlfr2supernova_pipeline)  
++ [cloudSPAdes](https://github.com/ablab/spades/releases/tag/cloudspades-paper)  
 + [Quast](http://quast.sourceforge.net/quast.html)
 
 How to install:
@@ -64,6 +65,10 @@ python="/path-to-your/python3"
 
 # download the UHGG kraken dataset 
 wget -r -np -nH -erobots=off http://ftp.ebi.ac.uk/pub/databases/metagenomics/mgnify_genomes/human-gut/v1.0/uhgg_kraken2-db/ 
+
+# please download supernova software first and cope the 4M barcodes white list for coverting the stLFR data to 10x data and then using cloudSPAdes assembler. 
+cp /path/to/supernova/supernova-cs/2.1.1/tenkit/lib/python/tenkit/barcodes/4M-with-alts-february-2016.txt ./MetaTrass/config/
+
 # configure the reference database
 $python ./MetaTrass/tool/fa_split_by_taxid.py -reffna ./kraken2-db/library/library*.fna -outdir ./uhgg_kraken2-fa/
 $python ./MetaTrass/tool/ref_genome_size.py -refdir ./uhgg_kraken2-fa/
@@ -403,7 +408,7 @@ MetaTrass parameters and notices:
 * Notices
 1. extreme-high depth species: 
 
-MetaTrass embedded Supernova as the assembly tool, which gains a longer continuity of genome but takes a longer assembly time compared to other tools. If meet the ultra-high depth species, it will fail to assemble because Supernova has a strict monitoring mechanism of input coverage. In particular, we recommend using other linked-reads' assemblers, such as cloudSPAdes, to re-assemble these species.
+MetaTrass embedded Supernova as the assembly tool, which gains a longer continuity of genome but takes a longer assembly time compared to other tools. If meet the ultra-high depth species, it will fail to assemble because Supernova has a strict monitoring mechanism of input coverage. In particular, we recommend using other linked-reads' assemblers, such as cloudSPAdes, to re-assemble these species or you can use [MetaTrass_lite](https://github.com/QYanwei/MetaTrass_lite).
 
 2. barcode with high interspecies shared: 
 
@@ -411,7 +416,7 @@ Some co-barcoding or linked-reads data may crash, which means barcodes are share
 
 3. others co-barcoding data:
 
-If you have linked-reads data, please convert them to stLFR format. Since the number of long fragments with the same barcode in linked-reads is greater than that of stLFR reads, more false-positive reads are introduced into the co-barcoding refined read sets, leading to the unsuccessfully assembling of several species by Supernova. We recommend using other co-barcoding assemblers, such as CloudSPAdes, to re-assemble these species.
+If you have linked-reads data, please convert them to stLFR format. Since the number of long fragments with the same barcode in linked-reads is greater than that of stLFR reads, more false-positive reads are introduced into the co-barcoding refined read sets, leading to the unsuccessfully assembling of several species by Supernova. We recommend using other co-barcoding assemblers, such as CloudSPAdes, to re-assemble these species or you can use [MetaTrass_lite](https://github.com/QYanwei/MetaTrass_lite).
 
 Output files:
 ---
@@ -458,6 +463,9 @@ MetaTrass performance
 |H_Gut_Meta03|37.88|55.5|16|3,147 |
 |P_Gut_Meta01|97.20|71.0|16|8,363 |
 
+MetaTrass Lite perforance
+---
+coming soon
 
 Contributing:
 ---
